@@ -1,0 +1,36 @@
+package com.example.example02;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class Aty01 extends Activity {
+	
+	private Button btnClose;
+	private TextView textView2;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.aty01);
+		
+		// 查找关闭Aty01的按钮
+		btnClose = (Button) findViewById(R.id.btnClose);
+		
+		// 增加关闭事件
+		btnClose.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				
+				finish();
+			}
+		});
+		
+		
+		
+	}
+}

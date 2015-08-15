@@ -1,9 +1,13 @@
 package com.example.example02;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * 演示android程序生命周期
@@ -13,6 +17,9 @@ import android.view.MenuItem;
  */
 
 public class MainActivity extends ActionBarActivity {
+	
+	private Button btnStartAty01;
+	private TextView textView1;
 
 	/**
 	 * 	========= 生命周期 =========
@@ -24,6 +31,40 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         
         System.out.println("onCreate");
+        
+        // 查找启动Aty01的按钮
+        btnStartAty01 = (Button) findViewById(R.id.btnStartAty01);
+        
+        // 增加启动Aty01的事件
+        btnStartAty01.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				
+				Intent intent = new Intent(MainActivity.this, Aty01.class);
+				
+				// 传递数据
+				intent.putExtra("kName", "LiuDeHua");
+				
+				// 传递数据2
+				Bundle data = new Bundle();
+				data.putString("kAgeDes", "My age is 26");
+				intent.putExtra("data", data);
+				
+				/**
+				 * 跳转
+				 */
+				
+				// 不需要接受返回参数时使用
+				// startActivity(intent);
+				
+				// 需要接受返回参数时使用
+				startActivityForResult(intent, 0);
+			}
+		});
+        
+        // 查找显示返回值的文本
+        textView1 = (TextView) findViewById(R.id.textView1);
     }
     
     @Override
@@ -86,5 +127,17 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+	/**
+	 * 	========= 接受传递的返回值 =========
+	 */
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    	super.onActivityResult(requestCode, resultCode, data);
+    	
+    	String result = data.getStringExtra("kName");
+    	textView1.setText(result);
     }
 }
