@@ -7,4 +7,8 @@ Android基础知识:http://www.jikexueyuan.com/course/9.html
 
 --------- example01 ---------
 
+v1.0： 完成第一个android程序
+
+--------- example02 ---------
+
 
