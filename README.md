@@ -11,4 +11,7 @@ v1.0： 完成第一个android程序
 
 --------- example02 ---------
 
+备注：Android 四大核心组建之Activity
+
+v2.0：演示android程序生命周期 http://www.android-doc.com/reference/android/app/Activity.html
 

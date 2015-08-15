@@ -5,12 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-/**
- * 演示android程序生命周期
- * 
- * @author green
- *
- */
 
 public class MainActivity extends ActionBarActivity {
 

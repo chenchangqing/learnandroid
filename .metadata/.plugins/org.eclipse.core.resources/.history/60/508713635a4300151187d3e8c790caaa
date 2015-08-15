@@ -7,7 +7,6 @@ import android.view.MenuItem;
 
 /**
  * 演示android程序生命周期
- * 
  * @author green
  *
  */
