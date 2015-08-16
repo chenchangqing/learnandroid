@@ -19,4 +19,4 @@ v2.0：演示android程序生命周期;实现Activity之间的跳转以及数据
 
 备注：Android 四大核心组件之Service
 
-v2.0：新建一个Service，在Service中使用Timer执行一个改变当前数字的TimerTask,启动该Service后，在Activity中获取该Service并打印当前数字
+v3.0：新建一个Service，在Service中使用Timer执行一个改变当前数字的TimerTask,启动该Service后，在Activity中获取该Service并打印当前数字
