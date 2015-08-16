@@ -1,0 +1,19 @@
+package com.example.example04;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+
+public class CustomBroadcast extends BroadcastReceiver {
+
+	@Override
+	public void onReceive(Context arg0, Intent intent) {
+
+		System.out.println("CustomBroadcast.onReceive()");
+		
+		// 输出广播传递的参数
+		String content = intent.getStringExtra("kContent");
+		System.out.println(content);
+	}
+
+}
