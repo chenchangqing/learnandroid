@@ -1,5 +1,0 @@
-INDEX VERSION 1.126+/Users/green/Desktop/learnandroid/.metadata/.plugins/org.eclipse.jdt.core
-3851465286.index
-194958186.index
-1270315800.index
-2090460156.index
